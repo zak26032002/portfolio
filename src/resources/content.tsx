@@ -2,18 +2,18 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
+  firstName: "Zakaria",
+  lastName: "Benazaiz",
+  name: `Zakaria Benazaiz`,
+  role: "Etudiant en BTS SIO",
+  avatar: "/images/avatar.png",
   email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  location: "Europe/Paris", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: <>My weekly newsletter about creativity and engineering</>,
 };
@@ -24,18 +24,14 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/zak26032002",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/zakaria-benazaiz",
   },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
-  },
+ 
   {
     name: "Email",
     icon: "email",
@@ -47,103 +43,84 @@ const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
   label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  title: `${person.name} Portfolio`,
+  description: `Portfolio ${person.role}`,
+  headline: (
+    <>
+      Portfolio
+      <br /> Zakaria Benazaiz
+    </>
+  ),
   featured: {
-    display: true,
-    title: (
-      <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
-        <Line background="brand-alpha-strong" vert height="20" />
-        <Text marginRight="4" onBackground="brand-medium">
-          Featured work
-        </Text>
-      </Row>
-    ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    display: false,
+    title: undefined,
+    href: ""
   },
   subline: (
     <>
-      I'm Selene, a design engineer at{" "}
-      <Logo
-        dark
-        icon="/trademarks/wordmark-dark.svg"
-        style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}
-      />
-      , where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      Je suis Zakaria, un étudiant au Lycée René Cassin,
+      où je me spécialise en BTS SIO (Services Informatiques aux Organisations).
     </>
   ),
 };
 
+
 const about: About = {
   path: "/about",
-  label: "About",
-  title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  label: "A propos",
+  title: `A propos – ${person.name}`,
+  description: `Rencontrez ${person.name}, ${person.role} de ${person.location}`,
   tableOfContent: {
     display: true,
     subItems: false,
   },
   avatar: {
-    display: true,
+    display: false,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
-  intro: {
-    display: true,
-    title: "Introduction",
-    description: (
-      <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
-      </>
-    ),
-  },
+intro: {
+  display: true,
+  title: "Introduction",
+  description: (
+    <span style={{ display: 'inline' }}>
+      Bonjour ! Je m'appelle Zakaria BENAZAIZ, étudiant en <a href="/documents/Métiers du numérique.pdf" download style={{ color: 'var(--brand-solid)', fontWeight: 'bold', textDecoration: 'underline', cursor: 'pointer', display: 'inline' }}>BTS SIO</a> (Services Informatiques aux Organisations). Passionné par le développement et les technologies du numérique, je conçois des solutions adaptées aux besoins des utilisateurs tout en perfectionnant mes compétences techniques et créatives. Vous pouvez télécharger mon CV au format PDF <a href="/documents/CV Zakaria BENAZAIZ 2025-2026.pdf" download style={{ color: 'var(--accent-solid)', fontWeight: 'bold', textDecoration: 'underline', cursor: 'pointer', display: 'inline' }}>ici</a>.
+    </span>
+  ),
+},
   work: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "Expérience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "CeA",
+        timeframe: "2025 - 2025",
+        role: "Stage developpement logiciel",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Gestion d'un parc informatique complexe assurant l'attribution et la maintenance de plusieurs postes de travail.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Developpement de composants logiciels en utilisant des technologies modernes pour améliorer l'efficacité des *
+            processus internes.
           </>,
         ],
         images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
+         
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Zalando",
+        timeframe: "Juillet 2025 - Aout 2025",
+        role: "Gestion de stocks et logistique",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Tri et organisation des produits dans l'entrepôt pour optimiser la gestion des stocks.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Collaboration avec l'équipe logistique pour assurer des livraisons efficaces et ponctuelles.
           </>,
         ],
         images: [],
@@ -152,53 +129,46 @@ const about: About = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Études",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Bac Scientifique",
+        description: <>Optention d'un Bac Scientifique mention Assez Bien.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Certification CISCO",
+        description: <>Obtention de la certification CISCO en réseautique.</>,
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Technologies & Compétences",
     skills: [
       {
-        title: "Figma",
+        title: "HTML",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Création de pages web structurées et sémantiques en utilisant HTML5 et CSS3.</>
         ),
         tags: [
           {
-            name: "Figma",
-            icon: "figma",
+            name: "HTML5",
+            icon: "html",
           },
+          {
+            name: "CSS3",
+            icon: "css",
+          }
         ],
         // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+        
         ],
       },
       {
         title: "Next.js",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Création de WebApp Next.js + Supabase.</>
         ),
         tags: [
           {
@@ -216,12 +186,7 @@ const about: About = {
         ],
         // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+      
         ],
       },  
     ],
@@ -231,17 +196,17 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
+  title: "Articles sur la technologie et l'innovation",
+  description: `Lire les articles récents de ${person.name}`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
 };
 
 const work: Work = {
   path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  label: "Projets",
+  title: `Projets – ${person.name}`,
+  description: `Projets de ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
