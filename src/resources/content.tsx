@@ -146,7 +146,7 @@ intro: {
     title: "Technologies & Compétences",
     skills: [
       {
-        title: "HTML",
+        title: "HTML & CSS",
         description: (
           <>Création de pages web structurées et sémantiques en utilisant HTML5 et CSS3.</>
         ),
@@ -188,7 +188,23 @@ intro: {
         images: [
       
         ],
-      },  
+      },
+       {
+        title: "Python",
+        description: (
+          <>Notions de base de programmation en python</>
+        ),
+        tags: [
+          {
+            name: "Python",
+            icon: "python",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+        
+        ],
+      },
     ],
   },
 };
